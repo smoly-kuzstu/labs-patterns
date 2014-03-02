@@ -8,6 +8,14 @@ package search;
  *
  * @author Andrey
  */
-public class SearchYandexAdapter {
+public class SearchYandexAdapter implements ISearchAdapter{
+    protected YandexApi api;
     
+    public SearchYandexAdapter(){
+        this.api = new YandexApi(5);
+    }
+    
+    public String searchText(String phrase){
+        return this.api.findText(phrase);
+    }
 }
