@@ -18,6 +18,8 @@ public class SimplefedEarningsAndExpensesTaxStrategy  implements ITaxStrategy{
     
     public LinkedList<String> getNeededDocumentsList(){
         LinkedList<String> docsList =  new LinkedList<>();
+        docsList.add("Налоговая декларация");
+        docsList.add("Книга доходов и расходов");
         return docsList;
     }
     

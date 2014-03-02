@@ -9,7 +9,15 @@ package taxPolicy;
  * @author Andrey
  */
 public class TaxReporting {
+    
     public void putReports(){
         
+    }
+    
+    public void putReportsWithFactory(){
+        
+    }
+    
+    protected void printDocsList(){
     }
 }
