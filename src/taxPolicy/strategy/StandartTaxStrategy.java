@@ -9,13 +9,17 @@ import java.util.LinkedList;
 /**
  *
  * @author Andrey
+ * Основная система налогообложения
  */
 public class StandartTaxStrategy implements ITaxStrategy{
     
+    @Override
     public double getTaxSumm(double incommingSumm, double expensesSumm){
+        // Состоит из НДФЛ, может быть реализация возврата НДС
         return incommingSumm  * 0.13; 
     }
     
+    @Override
     public LinkedList<String> getNeededDocumentsList(){
         LinkedList<String> docsList =  new LinkedList<>();
         docsList.add("Налоговая декларация");
