@@ -14,9 +14,13 @@ import taxPolicy.strategy.StandartTaxStrategy;
  * @author Andrey
  */
 public class TaxFactory {
-    public static ITaxStrategy getTaxPolicy(String PolicyType, boolean isSimple){
-        ITaxStrategy strategy;
-        switch (PolicyType){
+    /**
+     * Возвращает стратегию для расчёта налогов и подачи отчётности
+     * @param policyType Название системы налогообложения
+     * @param isSimple Является ли система налогообложения упрощённой
+     */
+    public static ITaxStrategy getTaxPolicy(String policyType, boolean isSimple){
+        switch (policyType){
             case "Стандартная":
                 return new StandartTaxStrategy();   
             case "Доходы и расходы" :
