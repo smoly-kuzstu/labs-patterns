@@ -10,11 +10,12 @@ package search;
  */
 public class FileSystemApiAdapter implements ISearchAdapter{
     protected FileSystemApi fileSystem;
-    
+
     public FileSystemApiAdapter(){
         this.fileSystem = new FileSystemApi("NTFS");
     }
     
+    @Override
     public String searchText(String phrase){
         return this.fileSystem.justSearchText(phrase);
     }

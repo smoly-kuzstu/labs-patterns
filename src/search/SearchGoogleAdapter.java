@@ -15,6 +15,7 @@ public class SearchGoogleAdapter implements ISearchAdapter{
         this.googleApi = new GoogleApi("8.8.8.8");
     }
     
+    @Override
     public String searchText(String phrase){
         return this.googleApi.amazingSearch(phrase);
     }

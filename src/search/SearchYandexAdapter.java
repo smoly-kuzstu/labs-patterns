@@ -15,6 +15,7 @@ public class SearchYandexAdapter implements ISearchAdapter{
         this.api = new YandexApi(5);
     }
     
+    @Override
     public String searchText(String phrase){
         return this.api.findText(phrase);
     }
