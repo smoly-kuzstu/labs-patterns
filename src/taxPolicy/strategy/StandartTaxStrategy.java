@@ -16,7 +16,7 @@ public class StandartTaxStrategy implements ITaxStrategy{
     @Override
     public double getTaxSumm(double incommingSumm, double expensesSumm){
         // Состоит из НДФЛ, может быть реализация возврата НДС
-        return incommingSumm  * 0.13; 
+        return incommingSumm  * 0.13 - expensesSumm * 0.18; 
     }
     
     @Override
