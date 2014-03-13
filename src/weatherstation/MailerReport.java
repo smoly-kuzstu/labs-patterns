@@ -8,7 +8,7 @@ package weatherstation;
  *
  * @author Andrey
  */
-public class SensorMailer implements IObserver{
+public class MailerReport implements IObserver{
     @Override
     public void update(double sensorValue, String sensorName) {
         String letterText = String.format("Sensor %s was changed %f", sensorName, sensorValue);

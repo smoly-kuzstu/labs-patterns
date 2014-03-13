@@ -14,7 +14,21 @@ public abstract class Sensor implements IObservable{
     protected LinkedList<IObserver> observers;
     protected double sensorValue;
     protected String sensorName;
+    
+    protected final double maxVoltage = 5.0;
 
+    /**
+     * Данный метод запускается при возникновении аппаратного прерывания,
+     * То есть при изменений.
+     * @param voltage Текущее напряжение на выходе датчика
+     */
+    public void hardwareIterrupt(double voltage){
+        this.sensorValue = this.countValueByVoltage(voltage);
+        this.notifyObservers();
+    }
+    
+    protected abstract double countValueByVoltage(double voltage);
+    
     @Override
     public void registerObserver(IObserver o)
     {
